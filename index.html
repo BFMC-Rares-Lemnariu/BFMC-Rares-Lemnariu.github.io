@@ -4,104 +4,157 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Web Page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <style>
+            /* Google Font */
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
             body, html {
                 margin: 0;
                 padding: 0;
                 scroll-behavior: smooth;
+                font-family: 'Open Sans', sans-serif;
+                background: #E6F2F1; /* Light green background, similar to the image's color palette */
             }
 
-            header {
-                background-color: #4CAF50; /* Or your chosen color */
-                color: white;
-                text-align: left;
-                position: fixed;
-                top: 0;
-                width: 100%;
-                z-index: 1000;
+            .navbar-custom {
+                background-color: #2E8B57; /* Forest green */
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             }
 
-            .header-content {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px 20px;
+            .nav-link {
+                color: #fff !important;
             }
 
-            .button-container {
-                position: absolute;
-                right: 10%; /* 10% from the right */
-                display: flex;
-                gap: 10px;
+            .nav-link:hover {
+                color: #DAF7A6 !important; /* Light green for hover state */
             }
 
+            .section-padding {
+                padding: 80px 0;
+            }
 
-            button {
-                background-color: white;
-                color: #4CAF50;
-                border: 2px solid white;
-                padding: 10px 20px;
+            #video-section { 
+                /* You might want to add a nature-themed video here */
+            }
+
+            #futuristic-text { 
+                background-color: #2E8B57; /* Forest green */
+                color: #fff; 
+                padding: 80px 0;
                 text-align: center;
-                text-decoration: none;
-                display: inline-block;
+            }
+
+            #data-submission { 
+                background-color: #E6F2F1; /* Light green background */
+            }
+
+            .container-custom {
+                max-width: 80%;
+                margin: auto;
+            }
+
+            .form-custom {
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .form-custom label, .form-custom input, .form-custom button {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .form-custom button {
+                background-color: #2E8B57; /* Forest green */
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 4px;
                 cursor: pointer;
             }
 
-            section {
-                padding: 60px 0;
-                margin-top: 100px; /* To prevent section content from hiding behind the fixed header */
+            .form-custom button:hover {
+                background-color: #276a47; /* Darker shade of green */
             }
 
-            /* Styling for specific sections */
-            #video-section { background-color: #f1f1f1; }
-            #futuristic-text { background-color: #222; color: #ddd; }
-            #data-submission { background-color: #ddd; }
-            .container {
-                max-width: 80%;
-                margin: 0 auto;
-                padding: 0 10px;
+            .video-responsive {
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+                padding-top: 25px;
+                height: 0;
             }
+
+            .video-responsive iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
         </style>
     </head>
     <body>
 
-    <header>
-        <div class="header-content">
-            <h1>Driveguard</h1>
-            <div class="button-container">
-                <button onclick="scrollToElement('video-section')">Video</button>
-                <button onclick="scrollToElement('futuristic-text')">Futuristic Text</button>
-                <button onclick="scrollToElement('data-submission')">Submit Data</button>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <p1 class="navbar-brand">Driveguard</p1>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#The-Hero">The Hero</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Benefits">Benefits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#How-It-Works">How it works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Interested">Interested?</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </header>
-    <div class="container">
-        <main>
-            <section id="video-section">
-                <video controls>
-                    <source src="path-to-your-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </section>
-
-            <section id="futuristic-text">
+    </nav>
+    
+    <main class="container-custom mt-5 pt-5">
+        <section id="The-Hero" class="section-padding">
+            <div class="container">
+                <div class="video-responsive">
+                    <!-- Embed YouTube/Vimeo Video Here -->
+                    <!-- Example: <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+                </div>
+            </div>
+        </section>
+    
+        <section id="Benefits" class="section-padding">
+            <div class="container text-center">
                 <p>Your futuristic styled text goes here.</p>
-            </section>
+            </div>
+        </section>
 
-            <section id="data-submission">
-                <form action="https://formspree.io/f/xayrnkzl" method="POST">
-                    <label for="email">Send us an e-mail!</label>
-                    <input type="email" id="email" name="email" required>
-                    <button type="submit">Submit</button>
-                </form>
-            </section>
-        </main>
-    </div>
-    <script>
-        function scrollToElement(elementId) {
-            document.getElementById(elementId).scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
+        <section id="#How-It-Works" class="section-padding">
+            <div class="container text-center">
+                <p>Your futuristic styled text goes here.</p>
+            </div>
+        </section>
+    
+        <section id="Interested" class="section-padding">
+            <div class="container">
+                <div class="form-custom">
+                    <form action="https://formspree.io/f/xayrnkzl" method="POST">
+                        <label for="email">Send us an e-mail!</label>
+                        <input type="email" id="email" name="email" required>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
