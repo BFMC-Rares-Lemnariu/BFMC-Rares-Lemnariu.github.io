@@ -124,10 +124,73 @@
                 }
             }
 
+            header {
+                text-align: center; /* Center the header content */
+            }
+
             .navbar-toggler-icon {
                 background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
             }
 
+            .headline-container {
+                display: block; /* Change this to block */
+                width: 30%; /* Width set to 30% */
+                margin-left: auto;
+                margin-right: auto;
+                padding: 20px;
+                text-align: left; /* Text aligned left inside the container */
+            }
+
+            h1 {
+                font-size: 2.5em; /* Large font size for headline */
+                color: black; /* Adjust color as needed */
+                margin: 0 0 10px 0; /* Adjust spacing around the h1 */
+                text-shadow: 2px 2px 4px #aaa; /* Optional: adds a shadow for depth */
+                /* Additional styling for the h1 can be added here */
+            }
+
+            h1 strong {
+                color: rgb(3, 65, 13); /* Highlight color for the DriveGuard part */
+                font-weight: bold;
+            }
+
+            .powered-by {
+                color: #808080; /* Lighter gray color */
+                text-align: right; /* Align the text to the right */
+                font-size: smaller; /* Make font size smaller */
+                
+            }
+
+            #Whats-There-To-Gain {
+                background-color: #f8f9fa; /* Light background to highlight the section */
+                color: #333; /* Default text color */
+            }
+
+            #Whats-There-To-Gain h2 {
+                color: #2E8B57; /* Theme color for the title */
+                margin-bottom: 20px; /* Spacing between title and content */
+                font-size: 2em; /* Larger font size for the title */
+            }
+
+            #Whats-There-To-Gain ul {
+                list-style-type: none; /* Removes default bullet points */
+                padding: 0; /* Resets default padding */
+                text-align: left; /* Aligns text to the left for easier reading */
+                max-width: 800px; /* Limits the width for better readability */
+                margin: auto; /* Centers the list in the section */
+            }
+
+            #Whats-There-To-Gain ul li {
+                margin-bottom: 10px; /* Spacing between list items */
+                padding: 10px; /* Padding inside each list item */
+                border-left: 4px solid #2E8B57; /* Adds a thematic border to the left */
+                background-color: #fff; /* White background for each list item */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            }
+
+            #Whats-There-To-Gain ul li strong {
+                color: #2E8B57; /* Theme color for the strong elements */
+            }
 
         </style>
     </head>
@@ -160,6 +223,11 @@
         
     
     <main class="container-custom mt-5 pt-5">
+        <div class="headline-container">
+            <h1>Meet <strong>DriveGuard</strong>!</h1>
+            <span class="powered-by">Part of <strong>TesserHub</strong></span>
+        </div>
+
         <section id="The-Hero" class="section-padding">
             <div class="container text-center">
                 <h2>The hero we didn't know we needed, but now we do!</h2>
@@ -173,7 +241,15 @@
         <section id="Whats-There-To-Gain" class="section-padding">
             <div class="container text-center">
                 <h2>What's there to gain?</h2>
-                <p>Your futuristic styled text goes here. This is the normal text that follows the title.</p>
+                <ul>
+                    <li><strong>Effortless Booking & Key Exchange</strong>: Easy, quick, and no hidden fees.</li>
+                    <li><strong>Client-Driven Excellence</strong>: Your feedback directly shapes our service enhancements.</li>
+                    <li><strong>Diverse Fleet with modern features</strong>: 3250 vehicles with an average age of 2 years, focusing on luxury and practicality.</li>
+                    <li><strong>Technological Upgrades</strong>: Continuous vehicle enhancement with the latest eco-friendly and safety features.</li>
+                    <li><strong>Comprehensive Services</strong>: Varied rental options, customizable insurance, 24/7 assistance, and retrofit solutions.</li>
+                    <li><strong>Customer-Centric Feedback Approach</strong>: Uses customer feedback for service improvements, including digital enhancements and eco-friendly options.</li>
+                    <li><strong>Industry Relevance</strong>: Maintains competitiveness through personalization, innovation, and adapting to client needs.</li>
+                </ul>
             </div>
         </section>
 
