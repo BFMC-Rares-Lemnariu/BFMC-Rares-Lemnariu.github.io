@@ -50,15 +50,28 @@
             }
 
             .container-custom {
-                max-width: 80%;
+                max-width: 70%;
                 margin: auto;
+                padding: 20px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+
+                /* Linear gradient background for a 3D effect */
+                background: linear-gradient(to bottom right, #E6F2F1, #C8E6C9);
+
+                /* Adding an inner shadow for more depth */
+                box-shadow: inset 0 4px 6px rgba(255, 255, 255, 0.3), 
+                0 8px 16px rgba(0, 0, 0, 0.2);
             }
+
 
             .form-custom {
                 background-color: white;
                 padding: 20px;
                 border-radius: 8px;
+                width: 80%;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .form-custom label, .form-custom input, .form-custom button {
@@ -94,6 +107,28 @@
                 height: 100%;
             }
 
+            @media (max-width: 991px) {
+                .navbar-collapse {
+                    position: absolute;
+                    background-color: #2E8B57; /* Your navbar color */
+                    top: 56px; /* Height of your navbar */
+                    right: 0; /* Align to the right */
+                    width: 20%; /* Auto width to fit content */
+                    max-width: 50%; /* Maximum width of dropdown */
+                    text-align: center;
+                    z-index: 1000;
+                }
+                .navbar-collapse.collapsing,
+                .navbar-collapse.show {
+                    display: block!important;
+                }
+            }
+
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+
+
         </style>
     </head>
     <body>
@@ -101,16 +136,19 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
             <p1 class="navbar-brand">Driveguard</p1>
-            <div class="collapse navbar-collapse">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#The-Hero">The Hero</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#Benefits">Benefits</a>
+                        <a class="nav-link" href="#Whats-There-To-Gain">What's there to gain?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#How-It-Works">How it works</a>
+                        <a class="nav-link" href="#How-Does-It-Work">How does it work?</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#Interested">Interested?</a>
@@ -119,26 +157,30 @@
             </div>
         </div>
     </nav>
+        
     
     <main class="container-custom mt-5 pt-5">
         <section id="The-Hero" class="section-padding">
-            <div class="container">
+            <div class="container text-center">
+                <h2>The hero we didn't know we needed, but now we do!</h2>
                 <div class="video-responsive">
                     <!-- Embed YouTube/Vimeo Video Here -->
-                    <!-- Example: <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=UnWoDhCa9SEHpTC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
     
-        <section id="Benefits" class="section-padding">
+        <section id="Whats-There-To-Gain" class="section-padding">
             <div class="container text-center">
-                <p>Your futuristic styled text goes here.</p>
+                <h2>What's there to gain?</h2>
+                <p>Your futuristic styled text goes here. This is the normal text that follows the title.</p>
             </div>
         </section>
 
-        <section id="#How-It-Works" class="section-padding">
+        <section id="How-Does-It-Work" class="section-padding">
             <div class="container text-center">
-                <p>Your futuristic styled text goes here.</p>
+                <h2>How does it work?</h2>
+                <p>Your futuristic styled text goes here. This is the normal text that follows the title.</p>
             </div>
         </section>
     
@@ -155,6 +197,9 @@
         </section>
     </main>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/umd/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     </body>
 </html>
