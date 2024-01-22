@@ -328,28 +328,21 @@
             }
 
             /* CSS for Vertical Arrows */
-            .process-step::after {
-                content: '';
-                position: absolute;
-                left: 50%;
-                bottom: 0;
-                transform: translateX(-50%);
-                width: 2px;
-                height: 60px; /* Adjust based on spacing */
-                background-color: #333;
-                z-index: -1;
-            }
+/* CSS for Vertical Arrows */
+.process-step::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -40px; /* Positioning the arrowhead */
+    border-width: 20px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent; /* Updated border-color to make it point downwards */
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+}
 
-            .process-step::after { /* Arrowhead */
-                content: '';
-                position: absolute;
-                left: 50%;
-                bottom: -20px; /* Positioning the arrowhead */
-                border-width: 10px;
-                border-style: solid;
-                border-color: transparent transparent #333 transparent;
-                transform: translateX(-50%);
-            }
+
 
             /* Avoid displaying an arrow after the last item */
             .process-step:last-child::after {
