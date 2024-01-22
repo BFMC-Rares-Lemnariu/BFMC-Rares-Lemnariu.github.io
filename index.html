@@ -153,7 +153,7 @@
                     padding-right: 0; /* Remove right padding on nav items */
                 }
 
-                .form-custom, .video-responsive iframe, #Whats-There-To-Gain, .section-padding {
+                .form-custom, .video-responsive iframe, .section-padding {
                     width: 100%; /* Set width to 100% for various elements */
                 }
 
@@ -236,26 +236,25 @@
                 
             }
 
-            #Whats-There-To-Gain {
+            .whatstheretogain {
                 background-color: #f8f9fa; /* Light background to highlight the section */
                 color: #333; /* Default text color */
-                width: 70%;
                 padding: 20px;
                 border-radius: 8px;
                 margin-left: auto;
                 margin-right: auto;
-                padding: 20px;
+                width:80%;
                 border-radius: 8px;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             }
 
-            #Whats-There-To-Gain h2 {
+            .whatstheretogain h2 {
                 color: #2E8B57; /* Theme color for the title */
                 margin-bottom: 20px; /* Spacing between title and content */
                 font-size: 2em; /* Larger font size for the title */
             }
 
-            #Whats-There-To-Gain ul {
+            .whatstheretogain ul {
                 list-style-type: none; /* Removes default bullet points */
                 padding: 0; /* Resets default padding */
                 text-align: left; /* Aligns text to the left for easier reading */
@@ -263,7 +262,7 @@
                 margin: auto; /* Centers the list in the section */
             }
 
-            #Whats-There-To-Gain ul li {
+            .whatstheretogain ul li {
                 margin-bottom: 10px; /* Spacing between list items */
                 padding: 10px; /* Padding inside each list item */
                 border-left: 4px solid #2E8B57; /* Adds a thematic border to the left */
@@ -271,10 +270,82 @@
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
             }
 
-            #Whats-There-To-Gain ul li strong {
+            .whatstheretogain ul li strong {
                 color: #2E8B57; /* Theme color for the strong elements */
             }
 
+            .howitworks {
+                background-color: #f8f9fa; /* Light background to highlight the section */
+                color: #333; /* Default text color */
+                padding: 20px;
+                border-radius: 8px;
+                margin-left: auto;
+                margin-right: auto;
+                width:80%;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .howitworks h2{
+                text-align:center;
+            }
+
+
+            .process-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 20px;
+            }
+
+            .process-step {
+                position: relative;
+                margin-bottom: 60px; /* Space between steps */
+                text-align: center;
+                padding-bottom: 40px; /* Space for the arrow */
+            }
+
+            .process-step img {
+                max-width: 20%;
+                height: auto;
+                border-radius: 50%;
+                border: 1px solid #ccc;
+            }
+
+            .process-step span {
+                display: block;
+                margin-top: 5px;
+            }
+
+            /* CSS for Vertical Arrows */
+            .process-step::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                width: 2px;
+                height: 60px; /* Adjust based on spacing */
+                background-color: #333;
+                z-index: -1;
+            }
+
+            .process-step::after { /* Arrowhead */
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: -20px; /* Positioning the arrowhead */
+                border-width: 10px;
+                border-style: solid;
+                border-color: transparent transparent #333 transparent;
+                transform: translateX(-50%);
+            }
+
+            /* Avoid displaying an arrow after the last item */
+            .process-step:last-child::after {
+                content: none;
+            }
         </style>
     </head>
     <body>
@@ -316,7 +387,8 @@
 
         <section id="The-Hero" class="section-padding">
             <div class="container text-center">
-                <h2>The hero we didn't know we needed, but now we do!</h2>
+                <h2>The hero</h2>
+                <h3>We didn't know we needed, but now we do!</h3>
                 <div class="video-responsive">
                     <!-- Embed YouTube/Vimeo Video Here -->
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=UnWoDhCa9SEHpTC4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -327,30 +399,45 @@
         <section id="Whats-There-To-Gain" class="section-padding">
             <div class="container text-center">
                 <h2>What's there to gain?</h2>
-                <ul>
-                    <li><strong>Effortless Booking & Key Exchange</strong>: Easy, quick, and no hidden fees.</li>
-                    <li><strong>Client-Driven Excellence</strong>: Your feedback directly shapes our service enhancements.</li>
-                    <li><strong>Diverse Fleet with modern features</strong>: 3250 vehicles with an average age of 2 years, focusing on luxury and practicality.</li>
-                    <li><strong>Technological Upgrades</strong>: Continuous vehicle enhancement with the latest eco-friendly and safety features.</li>
-                    <li><strong>Comprehensive Services</strong>: Varied rental options, customizable insurance, 24/7 assistance, and retrofit solutions.</li>
-                    <li><strong>Customer-Centric Feedback Approach</strong>: Uses customer feedback for service improvements, including digital enhancements and eco-friendly options.</li>
-                    <li><strong>Industry Relevance</strong>: Maintains competitiveness through personalization, innovation, and adapting to client needs.</li>
-                </ul>
+                <div class="whatstheretogain">
+                    <ul>
+                        <li><strong>Effortless Booking & Key Exchange</strong>: Easy, quick, and no hidden fees.</li>
+                        <li><strong>Client-Driven Excellence</strong>: Your feedback directly shapes our service enhancements.</li>
+                        <li><strong>Diverse Fleet with modern features</strong>: 3250 vehicles with an average age of 2 years, focusing on luxury and practicality.</li>
+                        <li><strong>Technological Upgrades</strong>: Continuous vehicle enhancement with the latest eco-friendly and safety features.</li>
+                        <li><strong>Comprehensive Services</strong>: Varied rental options, customizable insurance, 24/7 assistance, and retrofit solutions.</li>
+                        <li><strong>Customer-Centric Feedback Approach</strong>: Uses customer feedback for service improvements, including digital enhancements and eco-friendly options.</li>
+                        <li><strong>Industry Relevance</strong>: Maintains competitiveness through personalization, innovation, and adapting to client needs.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section id="How-Does-It-Work" class="section-padding">
             <div class="container text-center">
                 <h2>How does it work?</h2>
-                <p>Your futuristic styled text goes here. This is the normal text that follows the title.</p>
+                <div class="howitworks">
+                    <div class="process-container">
+                        <div class="process-step"><img src="image1.png" alt="Step 1"><span>Place an order for the product</span></div>
+                        <div class="process-step"><img src="image2.png" alt="Step 2"><span>Sign the contract and prepare your car key for the shippment</span></div>
+                        <div class="process-step"><img src="image3.png" alt="Step 2"><span>Send your car key to us via currier </span></div>
+                        <div class="process-step"><img src="image4.png" alt="Step 2"><span>Receive our formatted box (1-3 business days) </span></div>
+                        <div class="process-step"><img src="image5.png" alt="Step 2"><span>Secure it in your vehicle</span></div>
+                        <div class="process-step"><img src="image6.png" alt="Step 2"><span>Get our token generator app and handle your Virtual keys (set expiration event, set rights to your vehicle). Send it to your customers/friends</span></div>
+                        <div class="process-step"><img src="image6.png" alt="Step 2"><span>You customers/friends can now use the vehicle just by handling their virtual key</span></div>
+                        <div class="process-step"><img src="image8.png" alt="Step 8"><span>Remove access at any time to your vehicle</span></div>
+                    </div>
+                </div>
             </div>
+            
         </section>
     
         <section id="Interested" class="section-padding">
-            <div class="container">
+            <div class="container text-center">
+                <h2>Interested?</h2>
                 <div class="form-custom">
                     <form action="https://formspree.io/f/xayrnkzl" method="POST">
-                        <label for="email">Send us an e-mail!</label>
+                        <label for="email">Leave your e-mail, we will get to you!</label>
                         <input type="email" id="email" name="email" required>
                         <button type="submit">Submit</button>
                     </form>
