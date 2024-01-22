@@ -328,21 +328,18 @@
             }
 
             /* CSS for Vertical Arrows */
-/* CSS for Vertical Arrows */
-.process-step::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -40px; /* Positioning the arrowhead */
-    border-width: 20px;
-    border-style: solid;
-    border-color: #333 transparent transparent transparent; /* Updated border-color to make it point downwards */
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-}
-
-
+            .process-step::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: -40px; /* Positioning the arrowhead */
+                border-width: 20px;
+                border-style: solid;
+                border-color: #333 transparent transparent transparent; /* Updated border-color to make it point downwards */
+                transform: translateX(-50%);
+                width: 0;
+                height: 0;
+            }
 
             /* Avoid displaying an arrow after the last item */
             .process-step:last-child::after {
@@ -439,8 +436,12 @@
                 <h2>Interested?</h2>
                 <div class="form-custom">
                     <form action="https://formspree.io/f/xayrnkzl" method="POST">
-                        <label for="email">Leave your e-mail, we will get to you!</label>
+                        <label for="name">Who are we talking to?</label>
+                        <input type="name" id="name" name="name" required>
+                        <label for="email">How can we reach you? (e-mail address)</label>
                         <input type="email" id="email" name="email" required>
+                        <label for="area">Contacting us personally or on behalf of a company? Please give us some details if you'd like.</label>
+                        <input type="area" id="area" name="area" required>
                         <button type="submit">Submit</button>
                     </form>
                 </div>
