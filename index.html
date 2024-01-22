@@ -6,12 +6,12 @@
         <title>My Web Page</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <style>
-            /* Google Font */
             @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
             body, html {
                 margin: 0;
                 padding: 0;
+                font-size: 2vw; /* Adjust as needed */
                 scroll-behavior: smooth;
                 font-family: 'Open Sans', sans-serif;
                 background: #E6F2F1; /* Light green background, similar to the image's color palette */
@@ -33,6 +33,7 @@
 
             .nav-link {
                 color: #fff !important;
+                font-size: 1.5vw; /* Adjust as needed */
             }
 
             .nav-link:hover {
@@ -99,20 +100,32 @@
 
             .video-responsive {
                 position: relative;
-                padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-                padding-top: 25px;
-                height: 0;
+                overflow: hidden;
+                padding-top: 45%; /* 16:9 Aspect Ratio */
+                text-align: center; /* Center align for inner content */
             }
 
             .video-responsive iframe {
                 position: absolute;
                 top: 0;
-                left: 0;
-                width: 80%;
-                height: 80%;
+                left: 50%; /* Center the iframe */
+                transform: translateX(-50%); /* Align the center of the iframe with the center of the container */
+                width: 80%; /* Set iframe width to 80% */
+                height: 100%;
             }
 
             @media (max-width: 991px) {
+                .navbar-brand {
+                    font-size: 20px; /* Minimum font size */
+                    min-font-size: 20px; /* Ensure it doesn't scale down below 16px */
+                    min-height: 40px;
+                }
+
+                .nav-link {
+                    font-size: 13px; /* Minimum font size */
+                    min-font-size: 13px; /* Ensure it doesn't scale down below 12px */
+                }
+
                 .navbar-collapse {
                     position: absolute;
                     background-color: #2E8B57; /* Your navbar color */
@@ -127,6 +140,40 @@
                 .navbar-collapse.show {
                     display: block!important;
                 }
+
+                .container, .container-custom {
+                    width: 100%; /* Set the width to 100% */
+                    padding-left: 0; /* Remove padding on the left */
+                    padding-right: 0; /* Remove padding on the right */
+                    max-width: none; /* Remove any max-width constraints */
+                }
+
+                .navbar-nav .nav-item {
+                    margin-right: 0; /* Remove right margin on nav items */
+                    padding-right: 0; /* Remove right padding on nav items */
+                }
+
+                .form-custom, .video-responsive iframe, #Whats-There-To-Gain, .section-padding {
+                    width: 100%; /* Set width to 100% for various elements */
+                }
+
+                .form-custom label, .form-custom input, .form-custom button {
+                    width: 95%; /* Slightly less than 100% to account for any potential padding/borders */
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+            @media (min-width: 992px) {
+                body, html {
+                    font-size: 16px; /* Fixed font size for larger screens */
+                }
+                h1, h2 {
+                    font-size: 2em; /* Fixed font size for larger screens */
+                }
+                .nav-link {
+                    font-size: 1em; /* Fixed font size for larger screens */
+                }
             }
 
             header {
@@ -138,20 +185,43 @@
             }
 
             .headline-container {
-                display: block; /* Change this to block */
-                width: 30%; /* Width set to 30% */
-                margin-left: auto;
-                margin-right: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center; /* Center items horizontally */
+                width: 60%;
+                max-width: 1000px; /* Adjust this as needed */
+                margin: auto;
                 padding: 20px;
-                text-align: left; /* Text aligned left inside the container */
+                text-align: left;
+            }
+
+            .headline-container img {
+                border-radius: 50%;
+                max-width: 100px; /* Set a maximum width for the image */
+                max-height: 100px; /* Set a maximum height for the image */
+                width: auto; /* Maintain aspect ratio */
+                height: auto; /* Maintain aspect ratio */
+                margin-right: 10px;
+                flex-shrink: 0;
+            }
+
+            .headline-container div {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center; /* Center text vertically */
+            }
+
+            h2 {
+                font-size: 2vw; /* Larger font size for headings */
             }
 
             h1 {
-                font-size: 2.5em; /* Large font size for headline */
+                margin: 0; /* Adjust as needed */
+                font-size: 4vw; /* Larger font size for headings */
                 color: black; /* Adjust color as needed */
                 margin: 0 0 10px 0; /* Adjust spacing around the h1 */
                 text-shadow: 2px 2px 4px #aaa; /* Optional: adds a shadow for depth */
-                /* Additional styling for the h1 can be added here */
             }
 
             h1 strong {
@@ -237,8 +307,11 @@
     
     <main class="container-custom mt-5 pt-5">
         <div class="headline-container">
-            <h1>Meet <strong>DriveGuard</strong>!</h1>
-            <span class="powered-by">Part of <strong>TesserHub</strong></span>
+            <img src="image.png" alt="Driveguard" class="img-fluid rounded-circle">
+            <div>
+                <h1>Meet <strong>DriveGuard</strong>!</h1>
+                <span class="powered-by">Part of <strong>TesserHub</strong></span>
+            </div>
         </div>
 
         <section id="The-Hero" class="section-padding">
